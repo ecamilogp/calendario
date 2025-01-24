@@ -1,5 +1,8 @@
-import { createApp } from 'vue'
-import './style.css'
-import App from './App.vue'
+import { createApp } from 'vue';
+import { createPinia } from 'pinia';
+import App from './App.vue';
 
-createApp(App).mount('#app')
+const myApp = createApp(App);
+
+myApp.use(createPinia());
+myApp.mount('#app');
